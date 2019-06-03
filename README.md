@@ -9,7 +9,7 @@ git clone https://github.com/mo-pyy/aaurh.git
 cd aaurh
 pip install -r requirements.txt
 ```
-Run the script from inside the directory or move it to somewhere on your `$PATH`, for example:
+Move the script somewhere on your `$PATH`, for example:
 ```
 mv aaurh.py ~/.local/bin/aaurh
 ```
