@@ -38,7 +38,9 @@ i = input("Would you like to view the PKGBUILD? [y,n]")
 if i == "y":
     cmd = "nano ~/aur/"+selected+"/PKGBUILD"
     run(cmd, shell=True)
-i = input('Would you like to run "makepkg -si" now? [y,n]')
+i = input('Would you like to run "makepkg -si" now? ' + (
+    "WARNING: You have not yet viewed the PKGBUILD file. Do not install anything you don't trust! " if i != "y" else ""
+) +  ' [y,n]')
 if i == "y":
     cmd = "cd ~/aur/"+selected+" && makepkg -si"
     run(cmd, shell=True)
